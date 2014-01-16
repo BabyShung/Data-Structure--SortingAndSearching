@@ -1,5 +1,4 @@
-import applications.LinkedListSortingExperiment;
-import applications.RotatedBinarySearch;
+import FundamentalSortings.BubbleSort;
 
 public class Test {
 
@@ -37,6 +36,8 @@ public class Test {
 //		lls.sortLinkedList();
 //		lls.sortLinkedList2();
 
+		BubbleSort bs = new BubbleSort();
+		bs.bubbleSort("3474281112000910acb");
 		
 	}
 
