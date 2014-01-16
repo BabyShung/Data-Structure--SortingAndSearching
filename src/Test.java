@@ -1,3 +1,4 @@
+import applications.RotatedBinarySearch;
 import applications.sortAnagramsOfStringArray;
 
 public class Test {
@@ -20,12 +21,16 @@ public class Test {
 		// OneSidedBinarySearch osbs = new OneSidedBinarySearch();
 		// System.out.println(osbs.oneSidedBinarySearch(sa, 20));
 
-		sortAnagramsOfStringArray saosa = new sortAnagramsOfStringArray();
-		String[] arr = { "abc", "oipqe", "bca", "cfgt", "jncik", "tcfg",
-				"kijnc", "poieq" };
-		saosa.sortAnagrams(arr);
-		for (int i = 0; i < arr.length; i++)
-			System.out.print(arr[i] + " ");
+		// sortAnagramsOfStringArray saosa = new sortAnagramsOfStringArray();
+		// String[] arr = { "abc", "oipqe", "bca", "cfgt", "jncik", "tcfg",
+		// "kijnc", "poieq" };
+		// saosa.sortAnagrams(arr);
+		// for (int i = 0; i < arr.length; i++)
+		// System.out.print(arr[i] + " ");
+
+		int[] arr = { 5, 6, 7, 8, 1, 2, 3, 4 };
+		RotatedBinarySearch rbs = new RotatedBinarySearch();
+		System.out.println(rbs.binarySearch(arr, 0, arr.length - 1, 3));
 	}
 
 }
