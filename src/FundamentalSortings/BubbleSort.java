@@ -1,8 +1,16 @@
 package FundamentalSortings;
 
+/**
+ * Bubble Sort
+ * keep on comparing and swapping
+ * 
+ * 
+ * @author haozheng
+ *
+ */
 public class BubbleSort {
 
-	public void bubbleSort(String a) {
+	public char[] bubbleSort(String a) {
 		char[] arr = a.toCharArray();
 		char tmp;
 		for (int i = arr.length - 1; i > 0; i--) {
@@ -14,13 +22,7 @@ public class BubbleSort {
 				}
 			}
 		}
-		print(arr);
+		return arr;
 	}
-
-	private void print(char[] arr) {
-		for (int j = 0; j < arr.length; j++) {
-			System.out.print(arr[j]+" ");
-		}
-		
-	}
+ 
 }

@@ -1,4 +1,5 @@
 import FundamentalSortings.BubbleSort;
+import FundamentalSortings.SelectionSort;
 
 public class Test {
 
@@ -37,8 +38,17 @@ public class Test {
 //		lls.sortLinkedList2();
 
 		BubbleSort bs = new BubbleSort();
-		bs.bubbleSort("3474281112000910acb");
+		char[] arr = bs.bubbleSort("3474281112000910acb");
+		for (int j = 0; j < arr.length; j++) {
+			System.out.print(arr[j] + " ");
+		}
+		System.out.println();
 		
+		SelectionSort ss = new SelectionSort();
+		arr = ss.selectionSort("3474281112000910acb");
+		for (int j = 0; j < arr.length; j++) {
+			System.out.print(arr[j] + " ");
+		}
 	}
 
 }
