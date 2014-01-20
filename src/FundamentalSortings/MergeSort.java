@@ -7,6 +7,22 @@ package FundamentalSortings;
  * 
  * Space O(n)
  * 
+ * Why O(nlogn)?
+ * 
+ * Recurrence relation
+ * T(n) = 2T(n/2) + O(n)
+ *      = T(n/2) + T(n/2) + O(n)
+ *      = 2T(n/4) + 2T(n/4) + O(n/2) + O(n/2) + O(n)
+ *      ...
+ *      ...
+ *      = T(1) + T(1) + ... + T(1) + n*O(1) + (n/2)*O(2) + ... + 4*O(n/4) + 2*O(n/2)+ O(n)
+ * 
+ * Since T(n) keeps on being divided into halves, there will still be n*T(1), which is O(n)
+ * The next question is how many O(n) will there be
+ * If you draw a binary tree graph and notice the height of the tree,
+ * that will be how many of it.
+ * Since the height is logn, then there will be logn * n O(n)
+ * Ignoring the O(n) by n*T(1), the time complexity will be O(nlogn)
  * 
  */
 
