@@ -1,5 +1,6 @@
 import FundamentalSortings.BubbleSort;
 import FundamentalSortings.InsertionSort;
+import FundamentalSortings.MergeSort;
 import FundamentalSortings.SelectionSort;
 
 public class Test {
@@ -52,6 +53,12 @@ public class Test {
 		System.out.println();
 		InsertionSort is = new InsertionSort();
 		arr = is.insertionSort3("3474281112000910acb");
+		for (int j = 0; j < arr.length; j++) {
+			System.out.print(arr[j] + " ");
+		}
+		System.out.println();
+		MergeSort ms = new MergeSort();
+		arr = ms.mergeSort("3474281112000910acb");
 		for (int j = 0; j < arr.length; j++) {
 			System.out.print(arr[j] + " ");
 		}
