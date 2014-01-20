@@ -65,7 +65,7 @@ public class Test {
 		}
 		System.out.println();
 		QuickSort qs = new QuickSort();
-		arr = qs.quickSort("3474281112000910acb");
+		arr = qs.quickSort("72683154");
 		for (int j = 0; j < arr.length; j++) {
 			System.out.print(arr[j] + " ");
 		}

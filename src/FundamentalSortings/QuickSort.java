@@ -1,5 +1,23 @@
 package FundamentalSortings;
 
+/**
+ * QuickSort
+ * 
+ * average O(nlogn), worst O(n^2)
+ * 
+ * space O(logn) --- keep on being divided by 2
+ * 
+ * 
+ * Note that the partition method pick the middle element every time Actually we
+ * don't know what the mid ele is. If it is the mean, it will be great If it is
+ * the min or the max, it will be bad
+ * 
+ * The best lies if the original array is distributed uniformly
+ * 
+ * From experiments it showed that if qsort is faster than mergesort, less
+ * operations, if the elements are distributed uniformly.
+ * 
+ */
 public class QuickSort {
 
 	public char[] quickSort(String a) {
@@ -8,8 +26,11 @@ public class QuickSort {
 	}
 
 	private char[] quickSort(char[] arr, int left, int right) {
+		// partition and get the pivot index
+		int pivotIndex = partition2(arr, left, right);
 
-		int pivotIndex = partition(arr, left, right);
+		// once get the pivot index, still need to recursively partition left
+		// and right
 		if (left < pivotIndex - 1)
 			quickSort(arr, left, pivotIndex - 1);
 		if (right > pivotIndex)
@@ -20,10 +41,11 @@ public class QuickSort {
 	private int partition(char[] arr, int left, int right) {
 
 		char pivotEle = arr[(left + right) / 2];
+
 		while (left <= right) {
 			while (arr[left] < pivotEle)
 				left++;
-			while (pivotEle < arr[right])
+			while (arr[right] > pivotEle)
 				right--;
 
 			if (left <= right) {
@@ -32,6 +54,32 @@ public class QuickSort {
 				right--;
 			}
 		}
+		return left;
+	}
+	
+	private int partition2(char[] arr, int left, int right) {
+		//testing
+		char pivotEle = arr[(left + right) / 2];
+		
+		while (left <= right) {
+			while (arr[left] < pivotEle)
+				left++;
+			while (arr[right] > pivotEle)
+				right--;
+
+			if (left <= right) {
+				System.out.println("swapped: "+arr[left]+" and "+arr[right]);
+				swap(arr, left, right);
+				left++;
+				right--;
+			}
+		}
+		System.out.println("return pivotIndex: "+left);
+		System.out.print("after partition: ");
+		for (int j = 0; j < arr.length; j++) {
+			System.out.print(arr[j] + " ");
+		}
+		System.out.println();
 		return left;
 	}
 
