@@ -67,7 +67,13 @@ public class QuickSort {
 			while (arr[right] > pivotEle)
 				right--;
 
-			if (left <= right) {
+			/*
+			 * PS:
+			 * 1.if left = right, it will still swap, waste of code
+			 * 2.use a number that is not in the array to partition will cause arrayoutofbound
+			 */
+			
+			if (left < right) {
 				System.out.println("swapped: "+arr[left]+" and "+arr[right]);
 				swap(arr, left, right);
 				left++;

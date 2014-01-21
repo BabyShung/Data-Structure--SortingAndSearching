@@ -1,8 +1,4 @@
-import FundamentalSortings.BubbleSort;
-import FundamentalSortings.InsertionSort;
-import FundamentalSortings.MergeSort;
-import FundamentalSortings.QuickSort;
-import FundamentalSortings.SelectionSort;
+import applications.SortedArrayInterspersed_11_5;
 
 public class Test {
 
@@ -40,35 +36,40 @@ public class Test {
 		// lls.sortLinkedList();
 		// lls.sortLinkedList2();
 
-		BubbleSort bs = new BubbleSort();
-		char[] arr = bs.bubbleSort("3474281112000910acb");
-		for (int j = 0; j < arr.length; j++) {
-			System.out.print(arr[j] + " ");
-		}
-		System.out.println();
-		SelectionSort ss = new SelectionSort();
-		arr = ss.selectionSort("3474281112000910acb");
-		for (int j = 0; j < arr.length; j++) {
-			System.out.print(arr[j] + " ");
-		}
-		System.out.println();
-		InsertionSort is = new InsertionSort();
-		arr = is.insertionSort3("3474281112000910acb");
-		for (int j = 0; j < arr.length; j++) {
-			System.out.print(arr[j] + " ");
-		}
-		System.out.println();
-		MergeSort ms = new MergeSort();
-		arr = ms.mergeSort("3474281112000910acb");
-		for (int j = 0; j < arr.length; j++) {
-			System.out.print(arr[j] + " ");
-		}
-		System.out.println();
-		QuickSort qs = new QuickSort();
-		arr = qs.quickSort("72683154");
-		for (int j = 0; j < arr.length; j++) {
-			System.out.print(arr[j] + " ");
-		}
+		// BubbleSort bs = new BubbleSort();
+		// char[] arr = bs.bubbleSort("3474281112000910acb");
+		// for (int j = 0; j < arr.length; j++) {
+		// System.out.print(arr[j] + " ");
+		// }
+		// System.out.println();
+		// SelectionSort ss = new SelectionSort();
+		// arr = ss.selectionSort("3474281112000910acb");
+		// for (int j = 0; j < arr.length; j++) {
+		// System.out.print(arr[j] + " ");
+		// }
+		// System.out.println();
+		// InsertionSort is = new InsertionSort();
+		// arr = is.insertionSort3("3474281112000910acb");
+		// for (int j = 0; j < arr.length; j++) {
+		// System.out.print(arr[j] + " ");
+		// }
+		// System.out.println();
+		// MergeSort ms = new MergeSort();
+		// arr = ms.mergeSort("3474281112000910acb");
+		// for (int j = 0; j < arr.length; j++) {
+		// System.out.print(arr[j] + " ");
+		// }
+		// System.out.println();
+		// QuickSort qs = new QuickSort();
+		// arr = qs.quickSort("72683154");
+		// for (int j = 0; j < arr.length; j++) {
+		// System.out.print(arr[j] + " ");
+		// }
+		
+		SortedArrayInterspersed_11_5 sai = new SortedArrayInterspersed_11_5();
+		String[] strs= {"ab","","","bce","","","","ea","ef"};
+		System.out.println(sai.MutatedBinarySearch(strs, "ef"));
+		
 	}
 
 }
