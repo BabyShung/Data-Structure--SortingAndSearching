@@ -1,3 +1,5 @@
+import FundamentalSortings.BubbleSort;
+import FundamentalSortings.SelectionSort;
 import applications.SortedArrayInterspersed_11_5;
 
 public class Test {
@@ -36,18 +38,36 @@ public class Test {
 		// lls.sortLinkedList();
 		// lls.sortLinkedList2();
 
-		// BubbleSort bs = new BubbleSort();
-		// char[] arr = bs.bubbleSort("3474281112000910acb");
-		// for (int j = 0; j < arr.length; j++) {
-		// System.out.print(arr[j] + " ");
-		// }
-		// System.out.println();
-		// SelectionSort ss = new SelectionSort();
-		// arr = ss.selectionSort("3474281112000910acb");
-		// for (int j = 0; j < arr.length; j++) {
-		// System.out.print(arr[j] + " ");
-		// }
-		// System.out.println();
+		char[] arr;
+//		BubbleSort bs = new BubbleSort();
+//		arr = bs.bubbleSort("3474281112000910acb");
+//		System.out.print("BS: ");
+//		for (int j = 0; j < arr.length; j++) {
+//			System.out.print(arr[j] + " ");
+//		}
+//		System.out.println();
+//		arr = bs.bubbleSort2("3474281112000910acb");
+//		System.out.print("BS2: ");
+//		for (int j = 0; j < arr.length; j++) {
+//			System.out.print(arr[j] + " ");
+//		}
+//		System.out.println();
+		
+		
+		 SelectionSort ss = new SelectionSort();
+		 System.out.print("SS: ");
+		 arr = ss.selectionSort("3474281112000910acb");
+		 for (int j = 0; j < arr.length; j++) {
+		 System.out.print(arr[j] + " ");
+		 }
+		 System.out.println();
+		 System.out.print("SS2: ");
+		 arr = ss.selectionSort2("3474281112000910acb");
+		 for (int j = 0; j < arr.length; j++) {
+		 System.out.print(arr[j] + " ");
+		 }
+		 System.out.println();
+		
 		// InsertionSort is = new InsertionSort();
 		// arr = is.insertionSort3("3474281112000910acb");
 		// for (int j = 0; j < arr.length; j++) {
@@ -65,11 +85,12 @@ public class Test {
 		// for (int j = 0; j < arr.length; j++) {
 		// System.out.print(arr[j] + " ");
 		// }
-		
-		SortedArrayInterspersed_11_5 sai = new SortedArrayInterspersed_11_5();
-		String[] strs= {"ab","","","bce","","","","ea","ef"};
-		System.out.println(sai.MutatedBinarySearch(strs, "ef"));
-		
+
+		// SortedArrayInterspersed_11_5 sai = new
+		// SortedArrayInterspersed_11_5();
+		// String[] strs= {"ab","","","bce","","","","ea","ef"};
+		// System.out.println(sai.MutatedBinarySearch(strs, "ef"));
+
 	}
 
 }

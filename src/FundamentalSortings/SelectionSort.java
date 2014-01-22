@@ -12,7 +12,7 @@ public class SelectionSort {
 	public char[] selectionSort(String a) {
 		char[] arr = a.toCharArray();
 		int minIndex;
-		char tmp;
+ 
 		for (int i = 0; i < arr.length - 1; i++) {
 			minIndex = i;
 			for (int j = i; j < arr.length; j++) {
@@ -20,10 +20,31 @@ public class SelectionSort {
 					minIndex = j;
 			}
 			// swap
-			tmp = arr[minIndex];
-			arr[minIndex] = arr[i];
-			arr[i] = tmp;
+			swap(arr,minIndex,i);
 		}
 		return arr;
+	}
+	
+	public char[] selectionSort2(String a) {
+		char[] arr = a.toCharArray();
+		for (int i = 0; i < arr.length - 1; i++) {
+			swap(arr,i,getMinIndex(arr,i));
+		}
+		return arr;
+	}
+	
+	private int getMinIndex(char[] arr, int i) {
+		int minIndex = i;
+		for (int j = i; j < arr.length; j++) {
+			if (arr[j] < arr[minIndex])
+				minIndex = j;
+		}
+		return minIndex;
+	}
+
+	private void swap(char[] arr, int j, int i) {
+		char tmp = arr[j];
+		arr[j] = arr[i];
+		arr[i] = tmp;
 	}
 }
