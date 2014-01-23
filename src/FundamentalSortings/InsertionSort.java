@@ -1,5 +1,17 @@
 package FundamentalSortings;
 
+/**
+ * sol1 is the classic solution
+ * 
+ * sol2 is a little bit inefficient ,since it swaps elements more
+ * 
+ * sol3 is similar to 1, might not be that concise as 1
+ * 
+ * 
+ * @author haozheng
+ *
+ */
+
 public class InsertionSort {
 
 	public char[] insertionSort(String a) {
@@ -19,6 +31,7 @@ public class InsertionSort {
 		return arr;
 	}
 
+	//not the most efficient
 	public char[] insertionSort2(String a) {
 		char[] arr = a.toCharArray();
 		char tmp;
@@ -48,7 +61,7 @@ public class InsertionSort {
 					arr[j] = tmp;
 					break;
 				}
-
+				//this case is when a element swap from current all to the first place
 				if (j - 1 == 0)
 					arr[j - 1] = tmp;
 			}

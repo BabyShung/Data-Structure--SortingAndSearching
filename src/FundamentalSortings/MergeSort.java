@@ -29,9 +29,9 @@ package FundamentalSortings;
 public class MergeSort {
 
 	public char[] mergeSort(String a) {
+		
 		char[] arr = a.toCharArray();
 		char[] helper = new char[arr.length];
-		
 		return mergeSort(arr, helper, 0, arr.length - 1);
 	}
 
@@ -68,10 +68,11 @@ public class MergeSort {
 			current++;
 		}
 
+		//put the remaining left into the arr
 		int remain = mid - leftPartIndex + 1;
 		for (int i = 0; i < remain; i++) {
 			arr[current + i] = helper[leftPartIndex + i];
 		}
-
+		//note, the remaining right is already there
 	}
 }
