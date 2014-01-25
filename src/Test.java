@@ -91,10 +91,10 @@ public class Test {
 
 		BinarySearch bsea = new BinarySearch();
 		int[] bsarr = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 23 };
-		int index = bsea.binarySearch(bsarr, 10);
-
+		int index = bsea.binarySearch(bsarr, 23);
 		System.out.println("return index: " + index);
-
+		index = bsea.binarySearchIterative(bsarr, 23);
+		System.out.println("return index: " + index);
 	}
 
 }
