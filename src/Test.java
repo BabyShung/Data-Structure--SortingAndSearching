@@ -1,4 +1,6 @@
 import FundamentalSearchings.BinarySearch;
+import FundamentalSortings.BubbleSort;
+import FundamentalSortings.MergeSort;
 import FundamentalSortings.SelectionSort;
 
 public class Test {
@@ -38,33 +40,39 @@ public class Test {
 		// lls.sortLinkedList2();
 
 		char[] arr;
-		// BubbleSort bs = new BubbleSort();
-		// arr = bs.bubbleSort("3474281112000910acb");
-		// System.out.print("BS: ");
-		// for (int j = 0; j < arr.length; j++) {
-		// System.out.print(arr[j] + " ");
-		// }
-		// System.out.println();
-		// arr = bs.bubbleSort2("3474281112000910acb");
-		// System.out.print("BS2: ");
-		// for (int j = 0; j < arr.length; j++) {
-		// System.out.print(arr[j] + " ");
-		// }
-		// System.out.println();
+		 BubbleSort bs = new BubbleSort();
+		 arr = bs.bubbleSort("3474281112000910acb");
+		 System.out.print("BS: ");
+		 for (int j = 0; j < arr.length; j++) {
+		 System.out.print(arr[j] + " ");
+		 }
+		 System.out.println();
+		 arr = bs.bubbleSort2("3474281112000910acb");
+		 System.out.print("BS2: ");
+		 for (int j = 0; j < arr.length; j++) {
+		 System.out.print(arr[j] + " ");
+		 }
+		 System.out.println();
+		 arr = bs.bubbleSort3("3474281112000910acb");
+		 System.out.print("BS3: ");
+		 for (int j = 0; j < arr.length; j++) {
+		 System.out.print(arr[j] + " ");
+		 }
+		 System.out.println();
 
-		SelectionSort ss = new SelectionSort();
-		System.out.print("SS: ");
-		arr = ss.selectionSort("3474281112000910acb");
-		for (int j = 0; j < arr.length; j++) {
-			System.out.print(arr[j] + " ");
-		}
-		System.out.println();
-		System.out.print("SS2: ");
-		arr = ss.selectionSort2("3474281112000910acb");
-		for (int j = 0; j < arr.length; j++) {
-			System.out.print(arr[j] + " ");
-		}
-		System.out.println();
+//		SelectionSort ss = new SelectionSort();
+//		System.out.print("SS: ");
+//		arr = ss.selectionSort("3474281112000910acb");
+//		for (int j = 0; j < arr.length; j++) {
+//			System.out.print(arr[j] + " ");
+//		}
+//		System.out.println();
+//		System.out.print("SS2: ");
+//		arr = ss.selectionSort2("3474281112000910acb");
+//		for (int j = 0; j < arr.length; j++) {
+//			System.out.print(arr[j] + " ");
+//		}
+//		System.out.println();
 
 		// InsertionSort is = new InsertionSort();
 		// arr = is.insertionSort3("3474281112000910acb");
@@ -72,12 +80,21 @@ public class Test {
 		// System.out.print(arr[j] + " ");
 		// }
 		// System.out.println();
-		// MergeSort ms = new MergeSort();
-		// arr = ms.mergeSort("3474281112000910acb");
-		// for (int j = 0; j < arr.length; j++) {
-		// System.out.print(arr[j] + " ");
-		// }
-		// System.out.println();
+		 
+		 
+		 
+		 
+		 MergeSort ms = new MergeSort();
+		 arr = ms.mergeSort("3474281112000910acb");
+		 System.out.print("MS: ");
+		 for (int j = 0; j < arr.length; j++) {
+		 System.out.print(arr[j] + " ");
+		 }
+		 System.out.println();
+		 
+		 
+		 
+		 
 		// QuickSort qs = new QuickSort();
 		// arr = qs.quickSort("72683154");
 		// for (int j = 0; j < arr.length; j++) {
@@ -89,12 +106,12 @@ public class Test {
 		// String[] strs= {"ab","","","bce","","","","ea","ef"};
 		// System.out.println(sai.MutatedBinarySearch(strs, "ef"));
 
-		BinarySearch bsea = new BinarySearch();
-		int[] bsarr = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 23 };
-		int index = bsea.binarySearch(bsarr, 23);
-		System.out.println("return index: " + index);
-		index = bsea.binarySearchIterative(bsarr, 23);
-		System.out.println("return index: " + index);
+//		BinarySearch bsea = new BinarySearch();
+//		int[] bsarr = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 23 };
+//		int index = bsea.binarySearch(bsarr, 23);
+//		System.out.println("return index: " + index);
+//		index = bsea.binarySearchIterative(bsarr, 23);
+//		System.out.println("return index: " + index);
 	}
 
 }

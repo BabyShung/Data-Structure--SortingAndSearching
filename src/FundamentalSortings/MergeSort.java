@@ -49,6 +49,9 @@ public class MergeSort {
 	private void merge(char[] arr, char[] helper, int front, int mid, int rear) {
 
 		//copy the original arr to helper arr
+		//we need to do that,since every merge is actually modifying arr,
+		//helper is just used to compare, it didn't change
+		//so next merge we must update the helper first, which seems inefficient
 		for (int i = 0; i < arr.length; i++) {
 			helper[i] = arr[i];
 		}
