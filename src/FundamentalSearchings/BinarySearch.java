@@ -1,5 +1,17 @@
 package FundamentalSearchings;
 
+/**
+ * binary search is really important for searching in a sorted array,
+ * given a question to search something, notice if the data is sorted.
+ * Anyway, first point out if there exists a linear search, then the bs search --O(logn)
+ * 
+ * 1. recursive
+ * 2. iterative  --- usually more efficient
+ * 
+ * @author haozheng
+ *
+ */
+
 public class BinarySearch {
 
 	// recursive one

@@ -1,6 +1,7 @@
 import FundamentalSearchings.BinarySearch;
 import FundamentalSortings.BubbleSort;
 import FundamentalSortings.MergeSort;
+import FundamentalSortings.QuickSort;
 import FundamentalSortings.SelectionSort;
 
 public class Test {
@@ -95,23 +96,28 @@ public class Test {
 		 
 		 
 		 
-		// QuickSort qs = new QuickSort();
-		// arr = qs.quickSort("72683154");
-		// for (int j = 0; j < arr.length; j++) {
-		// System.out.print(arr[j] + " ");
-		// }
+		 QuickSort qs = new QuickSort();
+		 arr = qs.quickSort("3474281112000910acb");
+		 System.out.print("QS: ");
+		 for (int j = 0; j < arr.length; j++) {
+		 System.out.print(arr[j] + " ");
+		 }
+		 System.out.println();
+		 
+		 
+		 
 
 		// SortedArrayInterspersed_11_5 sai = new
 		// SortedArrayInterspersed_11_5();
 		// String[] strs= {"ab","","","bce","","","","ea","ef"};
 		// System.out.println(sai.MutatedBinarySearch(strs, "ef"));
 
-//		BinarySearch bsea = new BinarySearch();
-//		int[] bsarr = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 23 };
-//		int index = bsea.binarySearch(bsarr, 23);
-//		System.out.println("return index: " + index);
-//		index = bsea.binarySearchIterative(bsarr, 23);
-//		System.out.println("return index: " + index);
+		BinarySearch bsea = new BinarySearch();
+		int[] bsarr = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 23 };
+		int index = bsea.binarySearch(bsarr, 23);
+		System.out.println("return index: " + index);
+		index = bsea.binarySearchIterative(bsarr, 23);
+		System.out.println("return index: " + index);
 	}
 
 }

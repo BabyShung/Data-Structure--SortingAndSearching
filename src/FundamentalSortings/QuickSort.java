@@ -5,17 +5,19 @@ package FundamentalSortings;
  * 
  * average O(nlogn), worst O(n^2)
  * 
- * space O(logn) --- keep on being divided by 2
+ * space O(logn) (if stack occupancy is not considered --- keep on being divided
+ * by 2
  * 
  * 
- * Note that the partition method pick the middle element every time Actually we
- * don't know what the mid ele is. If it is the mean, it will be great If it is
- * the min or the max, it will be bad
+ * Note that the partition method picks the middle element every time. Actually
+ * we don't know what the mid ele is. If it is the mean, it will be great since
+ * it can partition best for the array. If it is the min or the max, it will be
+ * bad after partition
  * 
  * The best lies if the original array is distributed uniformly
  * 
- * From experiments it showed that if qsort is faster than mergesort, less
- * operations, if the elements are distributed uniformly.
+ * From experiments, it showed that if qsort is faster than mergesort, less
+ * operations and space, if the elements are distributed uniformly.
  * 
  */
 public class QuickSort {
@@ -27,11 +29,11 @@ public class QuickSort {
 
 	private char[] quickSort(char[] arr, int left, int right) {
 		// partition and get the pivot index
-		int pivotIndex = partition2(arr, left, right);
+		int pivotIndex = partition(arr, left, right);
 
 		// once get the pivot index, still need to recursively partition left
 		// and right
-		if (left < pivotIndex - 1)
+		if (left < pivotIndex - 1) // at least of size 2
 			quickSort(arr, left, pivotIndex - 1);
 		if (right > pivotIndex)
 			quickSort(arr, pivotIndex, right);
@@ -56,11 +58,11 @@ public class QuickSort {
 		}
 		return left;
 	}
-	
+
 	private int partition2(char[] arr, int left, int right) {
-		//testing
+		// testing
 		char pivotEle = arr[(left + right) / 2];
-		
+
 		while (left <= right) {
 			while (arr[left] < pivotEle)
 				left++;
@@ -68,19 +70,22 @@ public class QuickSort {
 				right--;
 
 			/*
-			 * PS:
-			 * 1.if left = right, it will still swap, waste of code
-			 * 2.use a number that is not in the array to partition will cause arrayoutofbound
+			 * PS: 1.if left = right, it will still swap, waste of code
+			 * 
+			 * 2.use a number that is not in the array to partition will cause
+			 * arrayOutOfBound, but this is an optimazised version, since we fix
+			 * the middle one as the pivot every time
 			 */
-			
+
 			if (left < right) {
-				System.out.println("swapped: "+arr[left]+" and "+arr[right]);
+				System.out.println("swapped: " + arr[left] + " and "
+						+ arr[right]);
 				swap(arr, left, right);
 				left++;
 				right--;
 			}
 		}
-		System.out.println("return pivotIndex: "+left);
+		System.out.println("return pivotIndex: " + left);
 		System.out.print("after partition: ");
 		for (int j = 0; j < arr.length; j++) {
 			System.out.print(arr[j] + " ");
