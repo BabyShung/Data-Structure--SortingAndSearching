@@ -17,6 +17,16 @@ package FundamentalSearchings;
  * or you can think of: T(n) = n(1+1/2+1/4+...1/n)<= 2n (since
  * 1=1/2+1/4+...+1/n<=1)
  * 
+ * 
+ * There are two kinds of solution, one iterative one recursive
+ * PS:
+ * This partition method is somewhat different,
+ * it first picks the middle one as pivot and then really partition all the array based on this element.
+ * 
+ * The other partition method in my quicksort file is somewhat wierd, every time, not really partition the array.
+ * 
+ * 
+ * 
  * @author haozheng
  * 
  */
@@ -24,7 +34,10 @@ package FundamentalSearchings;
 public class QuickSelect {
 
 	public int selectKth(int[] arr, int k) {
-
+		
+		//"k"th is the order in array (0th to n-1th), so need to substract one (1st to nth)
+		k--;
+		
 		if (arr == null || arr.length <= k)
 			throw new Error();
 
@@ -75,6 +88,10 @@ public class QuickSelect {
 
 	public int selectKthRec(int[] arr, int k) {
 
+		//"k"th is the order in array (0th to n-1th), so need to substract one (1st to nth)
+		k--;
+		
+		
 		if (arr == null || arr.length <= k)
 			throw new Error();
 
