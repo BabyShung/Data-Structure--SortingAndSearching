@@ -65,55 +65,56 @@ public class QuickSelect {
 
 	}
 
-	
 	/**
 	 * recursive one
+	 * 
 	 * @param arr
 	 * @param k
 	 * @return
 	 */
-	
+
 	public int selectKthRec(int[] arr, int k) {
 
-		return selectKthRec(arr, k, 0, arr.length - 1);
+		if (arr == null || arr.length <= k)
+			throw new Error();
 
+		return selectKthRec(arr, k, 0, arr.length - 1);
 	}
 
 	private int selectKthRec(int[] arr, int k, int left, int right) {
 
-		if (left <= right) {
+		if (left < right) {
 
-			int pivotIndex = partition(arr, left, right) - 1;
+			int pivotIndex = partition(arr, left, right);
 
-			if (pivotIndex == k) {
-				System.out.println("testing: " + (pivotIndex + 1));
-				System.out.println("testing: " + arr[pivotIndex]);
-				return arr[pivotIndex];
-			} else if (pivotIndex > k)
-				return selectKthRec(arr, k, left, pivotIndex - 1);
+			if (pivotIndex >= k)
+				selectKthRec(arr, k, left, pivotIndex);
 			else
-				return selectKthRec(arr, k, pivotIndex + 1, right);
+				selectKthRec(arr, k, pivotIndex + 1, right);
 
-		} else
-			return k;
+		}
+		return arr[k];
 	}
 
 	private int partition(int[] arr, int left, int right) {
 
-		int pivotEle = arr[(left + right) / 2];
+		int mid = arr[(left + right) / 2];
 
-		while (left <= right) {
-			while (arr[left] < pivotEle)
-				left++;
-			while (arr[right] > pivotEle)
-				right--;
+		while (left < right) {
 
-			if (left <= right) {
-				swap(arr, left, right);
-				left++;
+			if (arr[left] >= mid) { // put the large values at the end
+				swap(arr, right, left);
+
 				right--;
+			} else { // the value is smaller than the pivot, skip
+				left++;
 			}
 		}
+
+		// if we stepped up (r++) we need to step one down
+		if (arr[left] > mid)
+			left--;
+
 		return left;
 	}
 

@@ -125,9 +125,9 @@ public class Test {
 		int KthEle = qse.selectKth(qsarr, 1);
 		System.out.println("-------Kth element is: "+ KthEle);
 		
-//		int[] qsarr2 = { 10,2,6,4,8 };
-//		int KthEleRec = qse.selectKthRec(qsarr2, 2 );
-//		System.out.println("KthRec element is: "+ KthEleRec);
+		int[] qsarr2 = { 10,2,6,4,8 };
+		int KthEleRec = qse.selectKthRec(qsarr2, 4 );
+		System.out.println("KthRec element is: "+ KthEleRec);
 		
 		
 	}
