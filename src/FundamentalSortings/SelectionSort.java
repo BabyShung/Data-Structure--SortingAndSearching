@@ -15,7 +15,7 @@ public class SelectionSort {
  
 		for (int i = 0; i < arr.length - 1; i++) {
 			minIndex = i;
-			for (int j = i; j < arr.length; j++) {
+			for (int j = i+1; j < arr.length; j++) {
 				if (arr[j] < arr[minIndex])
 					minIndex = j;
 			}
@@ -35,7 +35,7 @@ public class SelectionSort {
 	
 	private int getMinIndex(char[] arr, int i) {
 		int minIndex = i;
-		for (int j = i; j < arr.length; j++) {
+		for (int j = i+1; j < arr.length; j++) {
 			if (arr[j] < arr[minIndex])
 				minIndex = j;
 		}

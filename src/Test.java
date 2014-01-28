@@ -1,4 +1,5 @@
 import FundamentalSearchings.BinarySearch;
+import FundamentalSearchings.QuickSelect;
 import FundamentalSortings.BubbleSort;
 import FundamentalSortings.MergeSort;
 import FundamentalSortings.QuickSort;
@@ -61,19 +62,19 @@ public class Test {
 		 }
 		 System.out.println();
 
-//		SelectionSort ss = new SelectionSort();
-//		System.out.print("SS: ");
-//		arr = ss.selectionSort("3474281112000910acb");
-//		for (int j = 0; j < arr.length; j++) {
-//			System.out.print(arr[j] + " ");
-//		}
-//		System.out.println();
-//		System.out.print("SS2: ");
-//		arr = ss.selectionSort2("3474281112000910acb");
-//		for (int j = 0; j < arr.length; j++) {
-//			System.out.print(arr[j] + " ");
-//		}
-//		System.out.println();
+		SelectionSort ss = new SelectionSort();
+		System.out.print("SS: ");
+		arr = ss.selectionSort("3474281112000910acb");
+		for (int j = 0; j < arr.length; j++) {
+			System.out.print(arr[j] + " ");
+		}
+		System.out.println();
+		System.out.print("SS2: ");
+		arr = ss.selectionSort2("3474281112000910acb");
+		for (int j = 0; j < arr.length; j++) {
+			System.out.print(arr[j] + " ");
+		}
+		System.out.println();
 
 		// InsertionSort is = new InsertionSort();
 		// arr = is.insertionSort3("3474281112000910acb");
@@ -118,6 +119,17 @@ public class Test {
 		System.out.println("return index: " + index);
 		index = bsea.binarySearchIterative(bsarr, 23);
 		System.out.println("return index: " + index);
+		
+		int[] qsarr = { 6,4,9,10,30,15};
+		QuickSelect qse = new QuickSelect();
+		int KthEle = qse.selectKth(qsarr, 1);
+		System.out.println("-------Kth element is: "+ KthEle);
+		
+//		int[] qsarr2 = { 10,2,6,4,8 };
+//		int KthEleRec = qse.selectKthRec(qsarr2, 2 );
+//		System.out.println("KthRec element is: "+ KthEleRec);
+		
+		
 	}
 
 }
