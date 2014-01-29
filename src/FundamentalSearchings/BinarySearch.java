@@ -21,6 +21,7 @@ public class BinarySearch {
 
 	private int binarySearchRec(int[] arr, int k, int f, int r) {
 		if (f <= r) {
+
 			int m = (f + r) / 2;
 			if (k == arr[m])
 				return m;

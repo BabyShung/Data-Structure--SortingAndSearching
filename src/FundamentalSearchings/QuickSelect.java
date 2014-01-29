@@ -1,7 +1,7 @@
 package FundamentalSearchings;
 
 /**
- * quickSelect is a transleftation of quickSort. It can be used right find first
+ * quickSelect is a transformation of quickSort. It can be used to find first
  * k elements or kth largest element
  * 
  * The best and average case of quickselect is O(n), and the wrost case is
@@ -18,12 +18,12 @@ package FundamentalSearchings;
  * 1=1/2+1/4+...+1/n<=1)
  * 
  * 
- * There are two kinds of solution, one iterative one recursive
- * PS:
- * This partition method is somewhat different,
- * it first picks the middle one as pivot and then really partition all the array based on this element.
+ * There are two kinds of solution, one iterative one recursive 
+ * PS: This partition method is somewhat different, it first picks the 
+ * middle one as pivot and then really partition all the array based on this element.
  * 
- * The other partition method in my quicksort file is somewhat wierd, every time, not really partition the array.
+ * The other partition method in my quicksort file is somewhat wierd, every
+ * time, not really fully partition the array.
  * 
  * 
  * 
@@ -34,12 +34,13 @@ package FundamentalSearchings;
 public class QuickSelect {
 
 	public int selectKth(int[] arr, int k) {
-		
-		//"k"th is the order in array (0th to n-1th), so need to substract one (1st to nth)
+
+		// "k"th is the order in array (0th to n-1th), so need to substract one
+		// (1st to nth)
 		k--;
-		
-		if (arr == null || arr.length <= k)
-			throw new Error();
+
+		if (arr == null || arr.length <= k || k < 0)
+			throw new Error("check key and arr!");
 
 		return selectKth(arr, k, 0, arr.length - 1);
 	}
@@ -88,12 +89,12 @@ public class QuickSelect {
 
 	public int selectKthRec(int[] arr, int k) {
 
-		//"k"th is the order in array (0th to n-1th), so need to substract one (1st to nth)
+		// "k"th is the order in array (0th to n-1th), so need to substract one
+		// (1st to nth)
 		k--;
-		
-		
-		if (arr == null || arr.length <= k)
-			throw new Error();
+
+		if (arr == null || arr.length <= k || k < 0)
+			throw new Error("check key and arr");
 
 		return selectKthRec(arr, k, 0, arr.length - 1);
 	}
