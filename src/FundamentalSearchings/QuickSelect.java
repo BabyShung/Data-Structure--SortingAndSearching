@@ -48,6 +48,7 @@ public class QuickSelect {
 	private int selectKth(int[] arr, int k, int front, int back) {
 		// if from == to we reached the kth element
 		while (front < back) {
+			
 			int left = front;
 			int right = back;
 			int mid = arr[(left + right) / 2];
@@ -125,7 +126,10 @@ public class QuickSelect {
 
 				right--;
 			} else { // the value is smaller than the pivot, skip
+				
+				//----
 				left++;
+				
 			}
 		}
 
