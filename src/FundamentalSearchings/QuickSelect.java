@@ -18,7 +18,7 @@ package FundamentalSearchings;
  * 1=1/2+1/4+...+1/n<=1)
  * 
  * 
- * There are two kinds of solution, one iterative one recursive 
+ * There are two kinds of solutions, one iterative one recursive 
  * PS: This partition method is somewhat different, it first picks the 
  * middle one as pivot and then really partition all the array based on this element.
  * 
@@ -132,7 +132,10 @@ public class QuickSelect {
 				
 			}
 		}
-
+		for(int k =0 ; k<arr.length;k++){
+			System.out.print(arr[k]+" ");
+		}
+		System.out.println();
 		// if we stepped up (r++) we need to step one down
 		if (arr[left] > mid)
 			left--;

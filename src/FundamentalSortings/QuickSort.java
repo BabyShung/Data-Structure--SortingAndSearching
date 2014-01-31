@@ -43,7 +43,6 @@ public class QuickSort {
 	private int partition(char[] arr, int left, int right) {
 
 		char pivotEle = arr[(left + right) / 2];
-
 		while (left <= right) {
 			while (arr[left] < pivotEle)
 				left++;
@@ -62,7 +61,6 @@ public class QuickSort {
 	private int partition2(char[] arr, int left, int right) {
 		// testing
 		char pivotEle = arr[(left + right) / 2];
-
 		while (left <= right) {
 			while (arr[left] < pivotEle)
 				left++;

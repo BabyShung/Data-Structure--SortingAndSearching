@@ -98,7 +98,7 @@ public class Test {
 		 
 		 
 		 QuickSort qs = new QuickSort();
-		 arr = qs.quickSort("3474281112000910acb");
+		 arr = qs.quickSort("425891");
 		 System.out.print("QS: ");
 		 for (int j = 0; j < arr.length; j++) {
 		 System.out.print(arr[j] + " ");
@@ -125,7 +125,7 @@ public class Test {
 		int KthEle = qse.selectKth(qsarr, 1);
 		System.out.println("-------Kth element is: "+ KthEle);
 		
-		int[] qsarr2 = { 10,2,6,4,8 };
+		int[] qsarr2 = { 4,2,5,8,9,1 };
 		int KthEleRec = qse.selectKthRec(qsarr2, 2 );
 		System.out.println("KthRec element is: "+ KthEleRec);
 		
