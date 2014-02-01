@@ -42,25 +42,25 @@ public class Test {
 		// lls.sortLinkedList2();
 
 		char[] arr;
-		 BubbleSort bs = new BubbleSort();
-		 arr = bs.bubbleSort("3474281112000910acb");
-		 System.out.print("BS: ");
-		 for (int j = 0; j < arr.length; j++) {
-		 System.out.print(arr[j] + " ");
-		 }
-		 System.out.println();
-		 arr = bs.bubbleSort2("3474281112000910acb");
-		 System.out.print("BS2: ");
-		 for (int j = 0; j < arr.length; j++) {
-		 System.out.print(arr[j] + " ");
-		 }
-		 System.out.println();
-		 arr = bs.bubbleSort3("3474281112000910acb");
-		 System.out.print("BS3: ");
-		 for (int j = 0; j < arr.length; j++) {
-		 System.out.print(arr[j] + " ");
-		 }
-		 System.out.println();
+		BubbleSort bs = new BubbleSort();
+		arr = bs.bubbleSort("3474281112000910acb");
+		System.out.print("BS: ");
+		for (int j = 0; j < arr.length; j++) {
+			System.out.print(arr[j] + " ");
+		}
+		System.out.println();
+		arr = bs.bubbleSort2("3474281112000910acb");
+		System.out.print("BS2: ");
+		for (int j = 0; j < arr.length; j++) {
+			System.out.print(arr[j] + " ");
+		}
+		System.out.println();
+		arr = bs.bubbleSort3("3474281112000910acb");
+		System.out.print("BS3: ");
+		for (int j = 0; j < arr.length; j++) {
+			System.out.print(arr[j] + " ");
+		}
+		System.out.println();
 
 		SelectionSort ss = new SelectionSort();
 		System.out.print("SS: ");
@@ -82,31 +82,22 @@ public class Test {
 		// System.out.print(arr[j] + " ");
 		// }
 		// System.out.println();
-		 
-		 
-		 
-		 
-		 MergeSort ms = new MergeSort();
-		 arr = ms.mergeSort("3474281112000910acb");
-		 System.out.print("MS: ");
-		 for (int j = 0; j < arr.length; j++) {
-		 System.out.print(arr[j] + " ");
-		 }
-		 System.out.println();
-		 
-		 
-		 
-		 
-		 QuickSort qs = new QuickSort();
-		 arr = qs.quickSort("425891");
-		 System.out.print("QS: ");
-		 for (int j = 0; j < arr.length; j++) {
-		 System.out.print(arr[j] + " ");
-		 }
-		 System.out.println();
-		 
-		 
-		 
+
+		MergeSort ms = new MergeSort();
+		arr = ms.mergeSort("3474281112000910acb");
+		System.out.print("MS: ");
+		for (int j = 0; j < arr.length; j++) {
+			System.out.print(arr[j] + " ");
+		}
+		System.out.println();
+
+		QuickSort qs = new QuickSort();
+		arr = qs.quickSort("425891");
+		System.out.print("QS: ");
+		for (int j = 0; j < arr.length; j++) {
+			System.out.print(arr[j] + " ");
+		}
+		System.out.println();
 
 		// SortedArrayInterspersed_11_5 sai = new
 		// SortedArrayInterspersed_11_5();
@@ -119,17 +110,17 @@ public class Test {
 		System.out.println("return index: " + index);
 		index = bsea.binarySearchIterative(bsarr, 23);
 		System.out.println("return index: " + index);
-		
-		int[] qsarr = { 6,4,9,10,30,15};
+
+		int[] qsarr = { 6, 4, 9, 10, 30, 15 };
 		QuickSelect qse = new QuickSelect();
 		int KthEle = qse.selectKth(qsarr, 1);
-		System.out.println("-------Kth element is: "+ KthEle);
-		
-		int[] qsarr2 = { 4,2,5,8,9,1 };
-		int KthEleRec = qse.selectKthRec(qsarr2, 2 );
-		System.out.println("KthRec element is: "+ KthEleRec);
-		
-		
+		System.out.println("-------Kth element is: " + KthEle);
+
+		int[] qsarr2 = { 4, 2, 5, 8, 9, 1 };
+		int KthEleRec = qse.selectKthRec(qsarr2, 6);
+		System.out.println("KthRec element is: " + KthEleRec);
+
+
 	}
 
 }

@@ -55,6 +55,7 @@ public class QuickSort {
 				right--;
 			}
 		}
+
 		return left;
 	}
 

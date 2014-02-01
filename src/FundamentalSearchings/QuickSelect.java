@@ -1,8 +1,8 @@
 package FundamentalSearchings;
 
 /**
- * quickSelect is a transformation of quickSort. It can be used to find first
- * k elements or kth largest element
+ * quickSelect is a transformation of quickSort. It can be used to find first k
+ * elements or kth largest element
  * 
  * The best and average case of quickselect is O(n), and the wrost case is
  * O(n^2)
@@ -18,9 +18,9 @@ package FundamentalSearchings;
  * 1=1/2+1/4+...+1/n<=1)
  * 
  * 
- * There are two kinds of solutions, one iterative one recursive 
- * PS: This partition method is somewhat different, it first picks the 
- * middle one as pivot and then really partition all the array based on this element.
+ * There are two kinds of solutions, one iterative one recursive PS: This
+ * partition method is somewhat different, it first picks the middle one as
+ * pivot and then really partition all the array based on this element.
  * 
  * The other partition method in my quicksort file is somewhat wierd, every
  * time, not really fully partition the array.
@@ -48,7 +48,7 @@ public class QuickSelect {
 	private int selectKth(int[] arr, int k, int front, int back) {
 		// if from == to we reached the kth element
 		while (front < back) {
-			
+
 			int left = front;
 			int right = back;
 			int mid = arr[(left + right) / 2];
@@ -65,11 +65,11 @@ public class QuickSelect {
 				}
 			}
 
-			// if we stepped up (r++) we need to step one down
+			// if we stepped up (left++) we need to step one down
 			if (arr[left] > mid)
 				left--;
 
-			// the r pointer is on the end of the first k elements
+			// the left pointer is on the end of the first k elements
 			if (k <= left) {
 				back = left;
 			} else {
@@ -104,41 +104,32 @@ public class QuickSelect {
 
 		if (left < right) {
 
-			int pivotIndex = partition(arr, left, right);
+			int pivotIndex = partitionQS(arr, left, right);
 
-			if (pivotIndex >= k)
-				selectKthRec(arr, k, left, pivotIndex);
+			if (pivotIndex - 1 >= k)
+				selectKthRec(arr, k, left, pivotIndex - 1);
 			else
-				selectKthRec(arr, k, pivotIndex + 1, right);
+				selectKthRec(arr, k, pivotIndex, right);
 
 		}
 		return arr[k];
 	}
 
-	private int partition(int[] arr, int left, int right) {
+	private int partitionQS(int[] arr, int left, int right) {
 
-		int mid = arr[(left + right) / 2];
-
-		while (left < right) {
-
-			if (arr[left] >= mid) { // put the large values at the end
-				swap(arr, right, left);
-
-				right--;
-			} else { // the value is smaller than the pivot, skip
-				
-				//----
+		int pivotEle = arr[(left + right) / 2];
+		while (left <= right) {
+			while (arr[left] < pivotEle)
 				left++;
-				
+			while (arr[right] > pivotEle)
+				right--;
+
+			if (left <= right) {
+				swap(arr, left, right);
+				left++;
+				right--;
 			}
 		}
-		for(int k =0 ; k<arr.length;k++){
-			System.out.print(arr[k]+" ");
-		}
-		System.out.println();
-		// if we stepped up (r++) we need to step one down
-		if (arr[left] > mid)
-			left--;
 
 		return left;
 	}
@@ -148,4 +139,31 @@ public class QuickSelect {
 		arr[w] = arr[r];
 		arr[r] = tmp;
 	}
+
+	// private int partition(int[] arr, int left, int right) {
+	//
+	// int mid = arr[(left + right) / 2];
+	//
+	// while (left < right) {
+	//
+	// if (arr[left] >= mid) { // put the large values at the end
+	// swap(arr, right, left);
+	//
+	// right--;
+	// } else { // the value is smaller than the pivot, skip
+	//
+	// //----
+	// left++;
+	//
+	// }
+	// }
+	//
+	// // if we stepped up (r++) we need to step one down
+	// if (arr[left] > mid){
+	// left--;
+	// }
+	//
+	// return left;
+	// }
+
 }
