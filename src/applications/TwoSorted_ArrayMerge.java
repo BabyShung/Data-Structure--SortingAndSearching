@@ -1,24 +1,23 @@
 package applications;
 
 /**
- * Question:
- * array a and b are sorted
- * array a has n elements, but it still has other space to store all elements of array b
- * merger b to a and make it sorted
+ * Question: array a and b are sorted array a has n elements, but it still has
+ * other space to store all elements of array b merger b to a and make it sorted
+ * 
  * @author haozheng
- *
+ * 
  */
 
-public class ArrayMerge {
+public class TwoSorted_ArrayMerge {
 
-	public ArrayMerge(){
-		
+	public TwoSorted_ArrayMerge() {
+
 	}
-	
-	public ArrayMerge(int capacityA,int capacityB){
-		
+
+	public TwoSorted_ArrayMerge(int capacityA, int capacityB) {
+
 	}
-	
+
 	public void merge(int[] a, int[] b, int lastA, int lastB) {
 
 		int iA = lastA - 1;
@@ -37,6 +36,7 @@ public class ArrayMerge {
 			iM--;
 		}
 
+		// need to move arrayB, no need for a,since they are there.
 		while (iB >= 0) {
 			a[iM] = b[iB];
 			iB--;

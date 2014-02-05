@@ -1,6 +1,10 @@
 package FundamentalSearchings;
 
 /**
+ * Binary Search--
+ * 
+ * return "index"
+ * 
  * binary search is really important for searching in a sorted array, given a
  * question to search something, notice if the data is sorted. Anyway, first
  * point out if there exists a linear search, then the bs search --O(logn)

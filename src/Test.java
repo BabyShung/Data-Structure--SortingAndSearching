@@ -4,6 +4,7 @@ import FundamentalSortings.BubbleSort;
 import FundamentalSortings.MergeSort;
 import FundamentalSortings.QuickSort;
 import FundamentalSortings.SelectionSort;
+import applications.TwoSorted_CheckIntersection;
 
 public class Test {
 
@@ -120,6 +121,15 @@ public class Test {
 		int KthEleRec = qse.selectKthRec(qsarr2, 6);
 		System.out.println("KthRec element is: " + KthEleRec);
 
+		
+		TwoSorted_CheckIntersection tsci = new TwoSorted_CheckIntersection();
+		int[] tscia = {3,6,7,9,11,12,14,18,19,20,23};
+		int[] tscib = {2,3,10,13,14,17,18};
+		int[] tscic = tsci.getIntersection(tscia, tscib);
+		for(int i = 0; i<tscic.length;i++){
+			System.out.print(tscic[i]+" ");
+		}
+		System.out.println();
 
 	}
 
