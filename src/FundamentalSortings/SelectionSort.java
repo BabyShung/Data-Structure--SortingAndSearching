@@ -25,6 +25,10 @@ public class SelectionSort {
 		return arr;
 	}
 	
+	/**
+	 * alternative
+	 */
+	
 	public char[] selectionSort2(String a) {
 		char[] arr = a.toCharArray();
 		for (int i = 0; i < arr.length - 1; i++) {
@@ -32,6 +36,11 @@ public class SelectionSort {
 		}
 		return arr;
 	}
+	
+	/**
+	 * helpers
+	 * 
+	 */
 	
 	private int getMinIndex(char[] arr, int i) {
 		int minIndex = i;
@@ -41,7 +50,7 @@ public class SelectionSort {
 		}
 		return minIndex;
 	}
-
+	
 	private void swap(char[] arr, int j, int i) {
 		char tmp = arr[j];
 		arr[j] = arr[i];
