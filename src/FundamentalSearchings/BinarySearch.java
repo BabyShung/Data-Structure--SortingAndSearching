@@ -43,10 +43,7 @@ public class BinarySearch {
 		int r = arr.length - 1;
 		int m;
 
-		while (true) {
-
-			if (f > r)
-				return -1;
+		while (f<=r) {
 
 			m = (f + r) / 2;
 
@@ -57,7 +54,7 @@ public class BinarySearch {
 			else
 				f = m + 1;
 		}
-
+		return -1;
 	}
 
 }
