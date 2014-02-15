@@ -59,39 +59,13 @@ public class QuickSort {
 		return left;
 	}
 
-	private int partition2(char[] arr, int left, int right) {
-		// testing
-		char pivotEle = arr[(left + right) / 2];
-		while (left <= right) {
-			while (arr[left] < pivotEle)
-				left++;
-			while (arr[right] > pivotEle)
-				right--;
-
-			/*
-			 * PS: 1.if left = right, it will still swap, waste of code
-			 * 
-			 * 2.use a number that is not in the array to partition will cause
-			 * arrayOutOfBound, but this is an optimazised version, since we fix
-			 * the middle one as the pivot every time
-			 */
-
-			if (left < right) {
-				System.out.println("swapped: " + arr[left] + " and "
-						+ arr[right]);
-				swap(arr, left, right);
-				left++;
-				right--;
-			}
-		}
-		System.out.println("return pivotIndex: " + left);
-		System.out.print("after partition: ");
-		for (int j = 0; j < arr.length; j++) {
-			System.out.print(arr[j] + " ");
-		}
-		System.out.println();
-		return left;
-	}
+	/**
+	 * PS: 1.if left = right, it will still swap, waste of code
+	 * 
+	 * 2.use a number that is not in the array to partition will cause
+	 * arrayOutOfBound, but this is an optimazised version, since we fix the
+	 * middle one as the pivot every time
+	 */
 
 	private void swap(char[] arr, int left, int right) {
 		char tmp = arr[left];
