@@ -5,6 +5,7 @@ import FundamentalSortings.InsertionSort;
 import FundamentalSortings.MergeSort;
 import FundamentalSortings.QuickSort;
 import FundamentalSortings.SelectionSort;
+import applications.MultiKeySort;
 import applications.TwoSorted_CheckIntersection;
 
 public class Test {
@@ -92,5 +93,8 @@ public class Test {
 		}
 		System.out.println();
 
+		MultiKeySort mks = new MultiKeySort();
+		mks.Sort();
+		
 	}
 }
