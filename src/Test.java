@@ -95,6 +95,7 @@ public class Test {
 
 		MultiKeySort mks = new MultiKeySort();
 		mks.Sort();
-		
+		System.out.println("-----");
+		mks.Sort2();
 	}
 }

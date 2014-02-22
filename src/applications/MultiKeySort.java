@@ -7,9 +7,17 @@ public class MultiKeySort {
 
 	public void Sort() {
 		Employee[] tmp = { new Employee("Hao", "Zheng"),
-				new Employee("Hao", "Chen"), new Employee("Sam", "Sun"),
-				new Employee("Tim", "Sun"), new Employee("Hao", "Deng") };
+				new Employee("Ai", "Zheng"), new Employee("Tim", "Sun"),
+				new Employee("Sam", "Sun"), new Employee("Boshi", "Zheng") };
 		Arrays.sort(tmp, new EmployeeComparator());
+		print(tmp);
+	}
+
+	public void Sort2() {
+		Employee[] tmp = { new Employee("Hao", "Zheng"),
+				new Employee("Ai", "Zheng"), new Employee("Tim", "Sun"),
+				new Employee("Sam", "Sun"), new Employee("Boshi", "Zheng") };
+		Arrays.sort(tmp);
 		print(tmp);
 	}
 
@@ -20,8 +28,8 @@ public class MultiKeySort {
 	}
 
 	/**
-	 * self-defined comparator, not stable!
-	 * if want it to be stable, sort twice. first sort by givenN, then sort by surN
+	 * self-defined comparator, not stable! if want it to be stable, sort twice.
+	 * first sort by givenN, then sort by surN
 	 * 
 	 */
 	private class EmployeeComparator implements Comparator<Employee> {
@@ -39,13 +47,20 @@ public class MultiKeySort {
 	 * example class
 	 * 
 	 */
-	private class Employee {
+	private class Employee implements Comparable<Employee> {
 		private String givenName;
 		private String surName;
 
 		public Employee(String givenName, String surName) {
 			this.givenName = givenName;
 			this.surName = surName;
+		}
+
+		@Override
+		public int compareTo(Employee ee) {
+
+			int diff = this.surName.compareToIgnoreCase(ee.surName);
+			return diff;
 		}
 
 	}
