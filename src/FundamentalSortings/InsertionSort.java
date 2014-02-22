@@ -14,7 +14,7 @@ package FundamentalSortings;
 
 public class InsertionSort {
 
-	public char[] insertionSort(String a) {
+	public String insertionSort(String a) {
 		char[] arr = a.toCharArray();
 		char tmp;
 		int j;
@@ -28,11 +28,11 @@ public class InsertionSort {
 			arr[j] = tmp;
 
 		}
-		return arr;
+		return new String(arr);
 	}
 
 	//not the most efficient
-	public char[] insertionSort2(String a) {
+	public String insertionSort2(String a) {
 		char[] arr = a.toCharArray();
 		char tmp;
 		for (int i = 1; i < arr.length; i++) {
@@ -45,10 +45,10 @@ public class InsertionSort {
 					break;
 			}
 		}
-		return arr;
+		return new String(arr);
 	}
 
-	public char[] insertionSort3(String a) {
+	public String insertionSort3(String a) {
 		char[] arr = a.toCharArray();
 		char tmp;
 		for (int i = 1; i < arr.length; i++) {
@@ -66,7 +66,7 @@ public class InsertionSort {
 					arr[j - 1] = tmp;
 			}
 		}
-		return arr;
+		return new String(arr);
 	}
 
 }

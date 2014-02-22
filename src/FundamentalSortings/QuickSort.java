@@ -22,9 +22,10 @@ package FundamentalSortings;
  */
 public class QuickSort {
 
-	public char[] quickSort(String a) {
+	public String quickSort(String a) {
 		char[] arr = a.toCharArray();
-		return quickSort(arr, 0, arr.length - 1);
+		char[] result = quickSort(arr, 0, arr.length - 1);
+		return new String(result);
 	}
 
 	private char[] quickSort(char[] arr, int left, int right) {

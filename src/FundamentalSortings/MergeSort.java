@@ -28,11 +28,12 @@ package FundamentalSortings;
 
 public class MergeSort {
 
-	public char[] mergeSort(String a) {
+	public String mergeSort(String a) {
 		
 		char[] arr = a.toCharArray();
 		char[] helper = new char[arr.length];
-		return mergeSort(arr, helper, 0, arr.length - 1);
+		char[] result = mergeSort(arr, helper, 0, arr.length - 1);
+		return new String(result);
 	}
 
 	private char[] mergeSort(char[] arr, char[] helper, int front, int rear) {

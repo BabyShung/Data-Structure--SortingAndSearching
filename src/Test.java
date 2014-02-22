@@ -1,6 +1,7 @@
 import FundamentalSearchings.BinarySearch;
 import FundamentalSearchings.QuickSelect;
 import FundamentalSortings.BubbleSort;
+import FundamentalSortings.InsertionSort;
 import FundamentalSortings.MergeSort;
 import FundamentalSortings.QuickSort;
 import FundamentalSortings.SelectionSort;
@@ -42,63 +43,24 @@ public class Test {
 		// lls.sortLinkedList();
 		// lls.sortLinkedList2();
 
-		char[] arr;
 		BubbleSort bs = new BubbleSort();
-		arr = bs.bubbleSort("3474281112000910acb");
-		System.out.print("BS: ");
-		for (int j = 0; j < arr.length; j++) {
-			System.out.print(arr[j] + " ");
-		}
-		System.out.println();
-		arr = bs.bubbleSort2("3474281112000910acb");
-		System.out.print("BS2: ");
-		for (int j = 0; j < arr.length; j++) {
-			System.out.print(arr[j] + " ");
-		}
-		System.out.println();
-		arr = bs.bubbleSort3("3474281112000910acb");
-		System.out.print("BS3: ");
-		for (int j = 0; j < arr.length; j++) {
-			System.out.print(arr[j] + " ");
-		}
-		System.out.println();
+		System.out.println("BS: " + bs.bubbleSort("3474281112000910acb"));
+		System.out.println("BS2: " + bs.bubbleSort2("3474281112000910acb"));
+		System.out.println("BS3: " + bs.bubbleSort3("3474281112000910acb"));
 
 		SelectionSort ss = new SelectionSort();
-		System.out.print("SS: ");
-		arr = ss.selectionSort("3474281112000910acb");
-		for (int j = 0; j < arr.length; j++) {
-			System.out.print(arr[j] + " ");
-		}
-		System.out.println();
-		System.out.print("SS2: ");
-		arr = ss.selectionSort2("3474281112000910acb");
-		for (int j = 0; j < arr.length; j++) {
-			System.out.print(arr[j] + " ");
-		}
-		System.out.println();
+		System.out.println("SS: " + ss.selectionSort("3474281112000910acb"));
+		System.out.println("SS2: " + ss.selectionSort2("3474281112000910acb"));
+		System.out.println("SS stable: " + ss.selectionSortStable("3474281112000910acb"));
 
-		// InsertionSort is = new InsertionSort();
-		// arr = is.insertionSort3("3474281112000910acb");
-		// for (int j = 0; j < arr.length; j++) {
-		// System.out.print(arr[j] + " ");
-		// }
-		// System.out.println();
+		InsertionSort is = new InsertionSort();
+		System.out.println("IS: " + is.insertionSort3("3474281112000910acb"));
 
 		MergeSort ms = new MergeSort();
-		arr = ms.mergeSort("3474281112000910acb");
-		System.out.print("MS: ");
-		for (int j = 0; j < arr.length; j++) {
-			System.out.print(arr[j] + " ");
-		}
-		System.out.println();
+		System.out.println("MS: " + ms.mergeSort("3474281112000910acb"));
 
 		QuickSort qs = new QuickSort();
-		arr = qs.quickSort("425891");
-		System.out.print("QS: ");
-		for (int j = 0; j < arr.length; j++) {
-			System.out.print(arr[j] + " ");
-		}
-		System.out.println();
+		System.out.println("QS: " + qs.quickSort("3474281112000910acb"));
 
 		// SortedArrayInterspersed_11_5 sai = new
 		// SortedArrayInterspersed_11_5();
@@ -121,16 +83,14 @@ public class Test {
 		int KthEleRec = qse.selectKthRec(qsarr2, 6);
 		System.out.println("KthRec element is: " + KthEleRec);
 
-		
 		TwoSorted_CheckIntersection tsci = new TwoSorted_CheckIntersection();
-		int[] tscia = {3,6,7,9,11,12,14,18,19,20,23};
-		int[] tscib = {2,3,10,13,14,17,18};
+		int[] tscia = { 3, 6, 7, 9, 11, 12, 14, 18, 19, 20, 23 };
+		int[] tscib = { 2, 3, 10, 13, 14, 17, 18 };
 		int[] tscic = tsci.getIntersection(tscia, tscib);
-		for(int i = 0; i<tscic.length;i++){
-			System.out.print(tscic[i]+" ");
+		for (int i = 0; i < tscic.length; i++) {
+			System.out.print(tscic[i] + " ");
 		}
 		System.out.println();
 
 	}
-
 }
