@@ -1,6 +1,14 @@
 package FundamentalSortings;
 
 /**
+ * Insertion Sort
+ * 
+ * Best case is O(n), avg or worst O(n^2)
+ * 
+ * When n is small (n<10), using IS is suitable for a hybrid of IS and QS and MS
+ * to do sorting
+ * 
+ * 
  * sol1 is the classic solution
  * 
  * sol2 is a little bit inefficient ,since it swaps elements more
@@ -9,7 +17,7 @@ package FundamentalSortings;
  * 
  * 
  * @author haozheng
- *
+ * 
  */
 
 public class InsertionSort {
@@ -31,7 +39,7 @@ public class InsertionSort {
 		return new String(arr);
 	}
 
-	//not the most efficient
+	// not the most efficient
 	public String insertionSort2(String a) {
 		char[] arr = a.toCharArray();
 		char tmp;
@@ -61,7 +69,8 @@ public class InsertionSort {
 					arr[j] = tmp;
 					break;
 				}
-				//this case is when a element swap from current all to the first place
+				// this case is when a element swap from current all to the
+				// first place
 				if (j - 1 == 0)
 					arr[j - 1] = tmp;
 			}

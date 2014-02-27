@@ -1,7 +1,10 @@
 package FundamentalSortings;
 
 /**
- * Bubble Sort keep on comparing and swapping
+ * Bubble Sort 
+ * 
+ * keep on comparing and swapping
+ * O(n^2)
  * 
  * 
  * @author haozheng

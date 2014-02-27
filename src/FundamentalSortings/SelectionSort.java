@@ -4,6 +4,10 @@ package FundamentalSortings;
  * Selection Sort It's like finding a min for n times A little faster than
  * bubble sort, since swap is fewer
  * 
+ * classic way is not stable.
+ * Also added a stable one, but it's inefficient
+ * 
+ * O(n^2)
  * @author haozheng
  * 
  */
