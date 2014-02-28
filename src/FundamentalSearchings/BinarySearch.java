@@ -19,11 +19,11 @@ public class BinarySearch {
 
 	// recursive one
 	public int binarySearch(int arr[], int k) {
-
 		return binarySearchRec(arr, k, 0, arr.length - 1);
 	}
 
 	private int binarySearchRec(int[] arr, int k, int f, int r) {
+		
 		if (f <= r) {
 
 			int m = (f + r) / 2;

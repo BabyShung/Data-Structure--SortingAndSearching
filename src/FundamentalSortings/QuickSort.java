@@ -16,19 +16,21 @@ package FundamentalSortings;
  * 
  * The best lies if the original array is distributed uniformly
  * 
- * From experiments, it showed that if qsort is faster than mergesort, less
+ * From experiments, it showed that qsort is faster than mergesort, using less
  * operations and space, if the elements are distributed uniformly.
+ * However, for large number of input, mergesort is better.
+ * Actually parallel computing for sorting large set is the best
  * 
  */
 public class QuickSort {
 
 	public String quickSort(String a) {
 		char[] arr = a.toCharArray();
-		char[] result = quickSort(arr, 0, arr.length - 1);
-		return new String(result);
+		quickSort(arr, 0, arr.length - 1);
+		return new String(arr);
 	}
 
-	private char[] quickSort(char[] arr, int left, int right) {
+	private void quickSort(char[] arr, int left, int right) {
 		// partition and get the pivot index
 		int pivotIndex = partition(arr, left, right);
 
@@ -38,7 +40,6 @@ public class QuickSort {
 			quickSort(arr, left, pivotIndex - 1);
 		if (right > pivotIndex)
 			quickSort(arr, pivotIndex, right);
-		return arr;
 	}
 
 	private int partition(char[] arr, int left, int right) {

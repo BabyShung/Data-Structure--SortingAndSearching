@@ -83,9 +83,6 @@ public class QuickSelect {
 	/**
 	 * recursive one
 	 * 
-	 * @param arr
-	 * @param k
-	 * @return
 	 */
 
 	public int selectKthRec(int[] arr, int k) {
