@@ -1,5 +1,11 @@
 package applications;
 
+/**
+ * sort the objects with multi-keys
+ * 
+ */
+
+
 import java.util.Arrays;
 import java.util.Comparator;
 
