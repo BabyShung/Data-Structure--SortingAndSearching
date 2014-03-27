@@ -4,6 +4,7 @@ import FundamentalSortings.BubbleSort;
 import FundamentalSortings.InsertionSort;
 import FundamentalSortings.MergeSort;
 import FundamentalSortings.QuickSort;
+import FundamentalSortings.RadixSort;
 import FundamentalSortings.SelectionSort;
 import applications.MultiKeySort;
 import applications.TwoSorted_CheckIntersection;
@@ -97,5 +98,15 @@ public class Test {
 		mks.Sort();
 		System.out.println("-----");
 		mks.Sort2();
+		
+		RadixSort rs = new RadixSort();
+		int[] rsarr = { 3, 66, 887, 139, 101, 12, 14, 18, 19, 20, 23 };
+		rs.radixSort(rsarr);
+		System.out.print("Radix Sort:  ");
+		for (int tmp: rsarr) {
+			System.out.print(tmp + " ");
+		}
+		System.out.println();
+		
 	}
 }
