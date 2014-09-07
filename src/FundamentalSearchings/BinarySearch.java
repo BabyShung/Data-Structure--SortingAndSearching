@@ -23,7 +23,8 @@ public class BinarySearch {
 	}
 
 	private int binarySearchRec(int[] arr, int k, int f, int r) {
-		
+		// why the condition contains f == r? because it will overlap if you
+		// search the front or rear element, and it need one more comparison
 		if (f <= r) {
 
 			int m = (f + r) / 2;
@@ -43,7 +44,7 @@ public class BinarySearch {
 		int r = arr.length - 1;
 		int m;
 
-		while (f<=r) {
+		while (f <= r) {
 
 			m = (f + r) / 2;
 
