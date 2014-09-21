@@ -1,3 +1,4 @@
+import FundamentalSortings.MergeSort;
 import applications.RotatedBinarySearch;
 
 public class Test {
@@ -52,8 +53,8 @@ public class Test {
 //		InsertionSort is = new InsertionSort();
 //		System.out.println("IS: " + is.insertionSort3("3474281112000910acb"));
 //
-//		MergeSort ms = new MergeSort();
-//		System.out.println("MS: " + ms.mergeSort("3474281112000910acb"));
+		MergeSort ms = new MergeSort();
+		System.out.println("MS: " + ms.mergeSort("3474281112000910acb"));
 //
 //		QuickSort qs = new QuickSort();
 //		System.out.println("QS: " + qs.quickSort("3474281112000910acb"));

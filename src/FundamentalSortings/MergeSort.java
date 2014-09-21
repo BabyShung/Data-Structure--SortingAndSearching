@@ -10,8 +10,10 @@ package FundamentalSortings;
  * Why O(nlogn)?
  * 
  * Recurrence relation T(n) = 2T(n/2) + O(n) = T(n/2) + T(n/2) + O(n) = 2T(n/4)
- * + 2T(n/4) + O(n/2) + O(n/2) + O(n) ... ... = T(1) + T(1) + ... + T(1) +
- * n*O(1) + (n/2)*O(2) + ... + 4*O(n/4) + 2*O(n/2)+ O(n)
+ * + 2T(n/4) + O(n/2) + O(n/2) + O(n) ... ...
+ * 
+ * = T(1) + T(1) + ... + T(1) + n*O(1) + (n/2)*O(2) + ... + 4*O(n/4) + 2*O(n/2)+
+ * O(n)
  * 
  * Since T(n) keeps on being divided into halves, there will still be n*T(1),
  * which is O(n) The next question is how many O(n) will there be If you draw a
@@ -58,20 +60,17 @@ public class MergeSort {
 
 		while (leftPartIndex <= mid && rightPartIndex <= rear) {
 			if (helper[leftPartIndex] <= helper[rightPartIndex]) {
-				arr[current] = helper[leftPartIndex];
-				leftPartIndex++;
+				arr[current] = helper[leftPartIndex++];
 			} else {
-				arr[current] = helper[rightPartIndex];
-				rightPartIndex++;
+				arr[current] = helper[rightPartIndex++];
 			}
 			current++;
 		}
 
 		// put the remaining left into the arr
-		int remainLeftNumbers = mid - leftPartIndex + 1;
-		for (int i = 0; i < remainLeftNumbers; i++) {
-			arr[current + i] = helper[leftPartIndex + i];
-		}
+		for(int i = leftPartIndex; i <= mid; i++)
+			arr[current++] = helper[i];
+		
 		// note, the remaining right is already there
 	}
 }
