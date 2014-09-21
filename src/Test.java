@@ -1,4 +1,5 @@
 import FundamentalSortings.MergeSort;
+import FundamentalSortings.RadixSort;
 import applications.RotatedBinarySearch;
 
 public class Test {
@@ -94,14 +95,14 @@ public class Test {
 //		System.out.println("-----");
 //		mks.Sort2();
 //		
-//		RadixSort rs = new RadixSort();
-//		int[] rsarr = { 3, 66, 887, 139, 101, 12, 14, 18, 19, 20, 23 };
-//		rs.radixSort(rsarr);
-//		System.out.print("Radix Sort:  ");
-//		for (int tmp: rsarr) {
-//			System.out.print(tmp + " ");
-//		}
-//		System.out.println();
+		RadixSort rs = new RadixSort();
+		int[] rsarr = { 3, 66, 887, 139, 101, 12, 14, 18, 19, 20, 23 };
+		rs.radixSort(rsarr);
+		System.out.print("Radix Sort:  ");
+		for (int tmp: rsarr) {
+			System.out.print(tmp + " ");
+		}
+		System.out.println();
 		
 	}
 }

@@ -16,10 +16,11 @@ package FundamentalSortings;
  * 
  * The best lies if the original array is distributed uniformly
  * 
- * From experiments, it showed that qsort is faster than mergesort, using less
- * operations and space, if the elements are distributed uniformly.
- * However, for large number of input, mergesort is better.
- * Actually parallel computing for sorting large set is the best
+ * From experiments, it showed that quicksort is faster than mergesort, using
+ * less operations and space, if the elements are distributed uniformly.
+ * 
+ * However, for large number of input, mergesort is better. Actually parallel
+ * computing(multi-PC) for sorting large set is the best
  * 
  */
 public class QuickSort {
@@ -44,7 +45,7 @@ public class QuickSort {
 
 	private int partition(char[] arr, int left, int right) {
 
-		char pivotEle = arr[(left + right) / 2];
+		char pivotEle = arr[(left + right) / 2];//just pick the middle one
 		while (left <= right) {
 			while (arr[left] < pivotEle)
 				left++;
